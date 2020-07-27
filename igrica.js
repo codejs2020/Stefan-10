@@ -28,9 +28,11 @@ function destroyRed(){  // Crvena kocka nestaje pri dodiru sa plavom
 function glueGreen(event){  // Plava se lepi za zelenu pri dodiru   // Nezavrsena funkcija
     if (plavaX + frame.left + 60 > green.left && plavaY + frame.top + 60 > green.top && plavaX + frame.left < green.left + 50 && plavaY + frame.top < green.top + 50){
         document.body.removeEventListener("keydown", squareMove);
+        document.getElementById("press-space").innerHTML = "Press SPACE";
     }
     if(event.keyCode === 32){
         document.body.addEventListener("keydown", squareMove);
+        document.getElementById("press-space").innerHTML = "";
     }
 }
 
