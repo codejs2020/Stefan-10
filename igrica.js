@@ -21,7 +21,7 @@ plavaKocka.style.left = plavaX + "px";
 
 function destroyRed(){  // Crvena kocka nestaje pri dodiru sa plavom
     if (plavaX + frame.left + 50 > red.left && plavaY + frame.top + 50 > red.top && plavaX + frame.left < red.left + 50 && plavaY + frame.top < red.top + 50){
-        crvena_kocka.style.display = 'none'
+        crvenaKocka.style.display = 'none'
     }
 }
 
