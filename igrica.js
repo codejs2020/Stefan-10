@@ -1,7 +1,7 @@
-let okvir = document.getElementById('okvir');
-let plava_kocka = document.getElementById('kocka');
-let zelena_kocka = document.getElementById('kocka-zelena');
-let crvena_kocka = document.getElementById('kocka-crvena');
+const okvir = document.getElementById('okvir');
+const plava_kocka = document.getElementById('kocka');
+const zelena_kocka = document.getElementById('kocka-zelena');
+const crvena_kocka = document.getElementById('kocka-crvena');
 
 let frame = okvir.getBoundingClientRect();
 let blue = plava_kocka.getBoundingClientRect();
@@ -30,7 +30,7 @@ function glueGreen(event){  // Plava se lepi za zelenu pri dodiru   // Nezavrsen
         document.body.removeEventListener("keydown", squareMove);
     }
     if(event.keyCode === 32){
-
+        document.body.addEventListener("keydown", squareMove);
     }
 }
 
@@ -52,11 +52,12 @@ function squareMove(event){  // Funkcija za pomeranje plave kocke
     plava_kocka.style.top = plavaY + "px";
 
     destroyRed();
-    glueGreen();
+    glueGreen(event);
 }
 
 
 
 ////////////     EventListener     /////////////
 
-document.body.addEventListener("keydown", squareMove)
+document.body.addEventListener("keydown", squareMove);
+document.body.addEventListener("keyup", glueGreen);
