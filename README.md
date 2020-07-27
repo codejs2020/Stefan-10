@@ -1,1 +1,2 @@
-# stefan-10
+# Šablon novog projekta
+
