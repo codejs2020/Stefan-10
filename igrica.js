@@ -1,18 +1,18 @@
 const okvir = document.getElementById('okvir');
-const plava_kocka = document.getElementById('kocka');
-const zelena_kocka = document.getElementById('kocka-zelena');
-const crvena_kocka = document.getElementById('kocka-crvena');
+const plavaKocka = document.getElementById('kocka');
+const zelenaKocka = document.getElementById('kocka-zelena');
+const crvenaKocka = document.getElementById('kocka-crvena');
 
 let frame = okvir.getBoundingClientRect();
-let blue = plava_kocka.getBoundingClientRect();
-let green = zelena_kocka.getBoundingClientRect();
-let red = crvena_kocka.getBoundingClientRect();
+let blue = plavaKocka.getBoundingClientRect();
+let green = zelenaKocka.getBoundingClientRect();
+let red = crvenaKocka.getBoundingClientRect();
 
 let plavaY = 0;
 let plavaX = 0;
 
-plava_kocka.style.top = plavaY + "px";
-plava_kocka.style.left = plavaX + "px";
+plavaKocka.style.top = plavaY + "px";
+plavaKocka.style.left = plavaX + "px";
 
 
 
@@ -50,8 +50,8 @@ function squareMove(event){  // Funkcija za pomeranje plave kocke
         plavaY += 10;
     }
 
-    plava_kocka.style.left = plavaX + "px"
-    plava_kocka.style.top = plavaY + "px";
+    plavaKocka.style.left = plavaX + "px"
+    plavaKocka.style.top = plavaY + "px";
 
     destroyRed();
     glueGreen(event);
